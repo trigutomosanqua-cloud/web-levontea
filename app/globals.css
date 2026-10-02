@@ -53,20 +53,26 @@ a {
   box-shadow: 0 12px 35px rgba(0, 70, 40, 0.08);
 }
 
+/* LOGO NAVBAR - DIPERBAIKI */
 .mini-brand {
-  width: 58px;
-  height: 58px;
-  display: grid;
-  place-items: center;
+  width: 78px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   overflow: hidden;
-  border-radius: 50%;
-  background: white;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: transparent;
 }
 
 .mini-brand img {
-  width: 62px;
-  height: 62px;
+  display: block;
+  width: 74px;
+  height: 54px;
   object-fit: contain;
+  object-position: center;
+  mix-blend-mode: multiply;
 }
 
 .site-header nav {
@@ -288,6 +294,7 @@ a {
    SEKARANG DIGESER JAUH KE ATAS
    supaya seluruh lingkaran terlihat.
 */
+
 .sticker-two {
   width: 120px;
   height: 120px;
@@ -498,7 +505,7 @@ a {
   max-width: 1180px;
   margin: auto;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 50px;
 }
@@ -855,16 +862,24 @@ a {
   .site-header {
     top: 10px;
     height: 60px;
+    padding: 6px 10px 6px 14px;
   }
 
+  /* LOGO MOBILE - DIPERBAIKI */
   .mini-brand {
-    width: 50px;
-    height: 50px;
+    width: 76px;
+    height: 48px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: transparent;
   }
 
   .mini-brand img {
-    width: 55px;
-    height: 55px;
+    width: 70px;
+    height: 48px;
+    object-fit: contain;
+    object-position: center;
+    mix-blend-mode: multiply;
   }
 
   .nav-social {

@@ -1,29 +1,26 @@
-import { spawn } from 'node:child_process';
-import process from 'node:process';
+import { createServer } from 'http'
+import next from 'next'
 
-const isWindows = process.platform === 'win32';
-const npmCommand = isWindows ? 'npm.cmd' : 'npm';
-const port = process.env.PORT || '3000';
+const hostname = '127.0.0.1'
+const port = 3000
 
-console.log('Le Vontea development server');
-console.log(`Folder: ${process.cwd()}`);
-console.log(`URL: http://localhost:${port}`);
-console.log('Stop server: Ctrl + C');
+const app = next({
+  dev: true,
+  hostname,
+  port,
+})
 
-const child = spawn(npmCommand, ['run', 'dev'], {
-  stdio: 'inherit',
-  shell: false,
-  env: { ...process.env, PORT: port },
-});
+const handle = app.getRequestHandler()
 
-const shutdown = () => {
-  if (!child.killed) child.kill();
-};
+await app.prepare()
 
-process.on('SIGINT', shutdown);
-process.on('SIGTERM', shutdown);
-
-child.on('exit', (code, signal) => {
-  if (signal) process.exit(0);
-  process.exit(code ?? 0);
-});
+createServer((req, res) => {
+  handle(req, res)
+}).listen(port, hostname, () => {
+  console.log('')
+  console.log('================================')
+  console.log('  Le Vontea Website')
+  console.log('  http://localhost:3000')
+  console.log('================================')
+  console.log('')
+})
