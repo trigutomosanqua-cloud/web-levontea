@@ -236,7 +236,7 @@ export default function Home() {
                     <rect
                       x="24"
                       y="13"
-                      width="32"
+                      width="48"
                       height="54"
                       rx="9"
                       fill="#fffdf5"
