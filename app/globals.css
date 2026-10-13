@@ -473,23 +473,11 @@ img {
 }
 
 .hero-product-badges {
-  position: relative;
+  position: absolute;
+
+  inset: 0;
 
   z-index: 5;
-
-  width: 100%;
-
-  margin-top: -30px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  padding:
-    0
-    5%;
 }
 
 
@@ -528,6 +516,12 @@ img {
 }
 
 .badge-volume {
+  position: absolute;
+
+  top: 18%;
+
+  left: 3%;
+
   width: 94px;
 
   height: 94px;
@@ -543,6 +537,12 @@ img {
 }
 
 .badge-fun {
+  position: absolute;
+
+  top: 60%;
+
+  right: 3%;
+
   width: 120px;
 
   height: 120px;
@@ -1578,73 +1578,20 @@ img {
       infinite;
   }
 
-  .hero-product-badges {
-    position: absolute;
-
-    z-index: 6;
-
-    left: 50%;
-
-    bottom: 25px;
-
-    transform:
-      translateX(-50%);
-
-    width: 100%;
-
-    height: 110px;
-
-    margin: 0;
-
-    padding:
-      0
-      8px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-  }
-
   .hero-product-badges .badge-volume {
-    position: relative;
-
-    z-index: 7;
-
     width: 76px;
 
     height: 76px;
 
-    flex-shrink: 0;
-
-    margin-left: 2px;
-
     font-size: 17px;
-
-    transform:
-      rotate(9deg);
   }
 
   .hero-product-badges .badge-fun {
-    position: relative;
-
-    z-index: 7;
-
     width: 84px;
 
     height: 84px;
 
-    flex-shrink: 0;
-
-    margin-right: 2px;
-
     font-size: 17px;
-
-    line-height: 0.9;
-
-    transform:
-      rotate(-10deg);
   }
 
 
