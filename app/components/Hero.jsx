@@ -6,10 +6,6 @@ export default function Hero() {
 
       <div className="hero-copy">
 
-        <span className="eyebrow">
-          MINUMAN TEH 220 ML
-        </span>
-
         <h1>
           Segarnya
           <br />
