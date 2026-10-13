@@ -1,22 +1,87 @@
+const moments = [
+  {
+    emoji: '🎮',
+    title: 'Lagi mabar',
+    text: 'Biar serunya makin panjang.',
+  },
+  {
+    emoji: '📚',
+    title: 'Lagi belajar',
+    text: 'Teman segar buat nemenin fokus.',
+  },
+  {
+    emoji: '🛵',
+    title: 'Lagi jalan',
+    text: 'Bawa satu, lanjut gas.',
+  },
+  {
+    emoji: '🍿',
+    title: 'Lagi nongkrong',
+    text: 'Ngobrol seru, minumnya Le Vontea.',
+  },
+]
+
 export default function Moments() {
   return (
-    <section className="section moments-section">
-      <div className="container moments-inner">
-        <div className="moments-copy">
-          <span className="eyebrow green">MOMEN KAMU</span>
-          <h2>Setiap Momen Punya Cerita</h2>
-          <p>
-            Ada momen yang direncanakan. Ada juga momen yang tiba-tiba jadi seru.
-            Apa pun momennya, Le Vontea siap nemenin.
-          </p>
+    <section
+      id="momen"
+      className="moments section"
+    >
+
+      <div className="moments-heading">
+
+        <div>
+
+          <div className="section-tag">
+            LE VONTEA + KAMU
+          </div>
+
+          <h2>
+            Teman di
+            <br />
+            <span>setiap momen.</span>
+          </h2>
+
         </div>
 
-        <div className="moments-shapes" aria-hidden="true">
-          <div className="shape shape-a">SERU</div>
-          <div className="shape shape-b">SEGAR</div>
-          <div className="shape shape-c">BARENG</div>
-        </div>
+        <p>
+          Nggak harus momen besar.
+          Yang penting ada cerita dan ada
+          yang bikin segar.
+        </p>
+
       </div>
+
+
+      <div className="moment-grid">
+
+        {moments.map((moment) => (
+          <article
+            className="moment-card"
+            key={moment.title}
+          >
+
+            <div className="moment-icon">
+              {moment.emoji}
+            </div>
+
+            <h3>
+              {moment.title}
+            </h3>
+
+            <p>
+              {moment.text}
+            </p>
+
+            <span>
+              Le Vontea →
+            </span>
+
+          </article>
+        ))}
+
+      </div>
+
     </section>
-  );
+  )
 }

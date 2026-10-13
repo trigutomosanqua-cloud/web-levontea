@@ -1,34 +1,83 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <section className="hero">
-      <div className="hero-decor hero-decor-one" />
-      <div className="hero-decor hero-decor-two" />
+    <section id="home" className="hero">
 
-      <div className="container hero-grid">
-        <div className="hero-copy">
-          <span className="eyebrow">LE VONTEA</span>
-          <h1>Segarnya<br /><em>Bikin Seru</em></h1>
-          <p>
-            Teman segar untuk nemenin berbagai aktivitas dan momen seru kamu.
-          </p>
-          <a className="button button-light" href="#sosial">
-            Ikuti Keseruan Le Vontea
+      <div className="hero-copy">
+
+        <span className="eyebrow">
+          MINUMAN TEH 220 ML
+        </span>
+
+        <h1>
+          Segarnya
+          <br />
+          <em>Bikin Seru</em>
+        </h1>
+
+        <p>
+          Teman segar buat belajar, mabar,
+          nongkrong, sampai jalan-jalan.
+        </p>
+
+        <div className="hero-actions">
+
+          <a
+            className="button button-dark"
+            href="#produk"
+          >
+            Kenalan sama Le Vontea
           </a>
+
+          <a
+            className="text-link"
+            href="https://www.tiktok.com/@levontea.id"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Lihat keseruannya →
+          </a>
+
         </div>
 
-        <div className="hero-product">
-          <div className="product-glow" />
-          <Image
-            src="/images/product/levontea-product.png"
-            alt="Le Vontea 220 ml"
-            width={650}
-            height={650}
-            priority
-          />
-        </div>
       </div>
+
+
+      <div className="hero-product">
+
+        <div className="hero-product-stage">
+
+          <div className="hero-sun" />
+
+          <div className="hero-product-image">
+            <Image
+              src="/images/product/levontea-product.png"
+              alt="Produk Le Vontea 220 ml"
+              width={620}
+              height={1100}
+              priority
+            />
+          </div>
+
+          <div className="hero-product-badges">
+
+            <div className="product-badge badge-volume">
+              220 ml
+            </div>
+
+            <div className="product-badge badge-fun">
+              teman
+              <br />
+              seru
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
-  );
+  )
 }

@@ -1,17 +1,45 @@
+import Image from 'next/image'
+
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="container footer-inner">
-        <div>
-          <strong>LE VONTEA</strong>
-          <span>Segarnya Bikin Seru</span>
-        </div>
-        <div className="footer-links">
-          <a href="https://www.instagram.com/levontea.id/" target="_blank" rel="noreferrer">Instagram</a>
-          <a href="https://www.tiktok.com/@levontea.id" target="_blank" rel="noreferrer">TikTok</a>
-        </div>
-        <small>© 2026 Le Vontea</small>
+
+      <Image
+        src="/images/brand/logo-levontea.png"
+        alt="Le Vontea"
+        width={110}
+        height={110}
+      />
+
+      <p>
+        Segarnya Bikin Seru
+      </p>
+
+      <div>
+
+        <a
+          href="https://www.instagram.com/levontea.id/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Instagram
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@levontea.id"
+          target="_blank"
+          rel="noreferrer"
+        >
+          TikTok
+        </a>
+
       </div>
+
+      <small>
+        © {new Date().getFullYear()} Le Vontea.
+        All rights reserved.
+      </small>
+
     </footer>
-  );
+  )
 }
