@@ -22,9 +22,11 @@ Single-page marketing/landing site for **Le Vontea** (a 220 ml tea drink).
 
 ## Architecture
 
-- **Single-page site.** The entire homepage lives in `app/page.js` — all sections are written inline (Header, Hero, Tentang, Produk, Momen, Social, Footer).
+- **Single-page site.** The homepage is composed of 7 components in `app/components/`, assembled in `app/page.js`.
 - `app/layout.js` is the root layout (sets metadata, imports `globals.css`).
-- **`app/components/` contains 8 components** (`About`, `Activities`, `CTA`, `Footer`, `Hero`, `Moments`, `Product`, `SocialMedia`) that are **currently NOT imported/used** by `page.js`. They appear to be leftovers from an earlier modular version. Treat them as **dead code** unless you intend to refactor `page.js` to use them.
+- **`app/components/`** (all imported and used by `page.js`): `Header`, `Hero`, `About`, `Product`, `Moments`, `SocialMedia`, `Footer`.
+- Components are **server components** (no `'use client'`). If you add interactivity or GSAP to a component, add `'use client'` at the top of that file.
+- **To add a page:** create a new file in `app/` (App Router), import the components you need, and compose them.
 - New pages/routes go in `app/` following Next.js App Router conventions.
 
 ## Styling
@@ -63,6 +65,5 @@ Single-page marketing/landing site for **Le Vontea** (a 220 ml tea drink).
 ## Common Gotchas
 
 - **Parentheses in path:** The workspace path contains `(VSCODE)`. Quote the path in shell commands (PowerShell) or use the tool's `workdir` parameter.
-- **Unused components:** The 8 files in `app/components/` are not imported by `page.js`. Don't assume they render — the live homepage is entirely `page.js`.
 - **Unused deps:** `gsap` / `@gsap/react` are in `package.json` but not used in code.
 - **Dev vs production:** `npm run dev` = `next dev`; `npm run start` = `next start`; `node server.mjs` = custom server. They behave slightly differently.
