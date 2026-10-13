@@ -1216,6 +1216,31 @@ img {
 
 
 /* =========================================
+   DESKTOP (fit hero dalam viewport)
+========================================= */
+
+@media (min-width: 901px) {
+
+  .hero {
+    min-height: 100vh;
+
+    padding:
+      45px
+      max(7vw, 40px)
+      50px;
+  }
+
+  .hero-product-stage {
+    min-height: 0;
+  }
+
+  .hero-product-image {
+    width: min(380px, 90%);
+  }
+}
+
+
+/* =========================================
    TABLET
 ========================================= */
 
