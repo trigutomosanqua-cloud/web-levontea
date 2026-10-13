@@ -26,15 +26,6 @@ export default function Hero() {
             Kenalan sama Le Vontea
           </a>
 
-          <a
-            className="text-link"
-            href="https://www.tiktok.com/@levontea.id"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Lihat keseruannya →
-          </a>
-
         </div>
 
       </div>
